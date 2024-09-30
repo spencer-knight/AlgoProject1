@@ -49,7 +49,17 @@ void SinglyLinkedList::displayAddress()
 }
 void SinglyLinkedList::insertSomewhere(int position, Node * newNode) // counting
 {
-	// CODE TO BE ADDED for Project 1
+	if (position == 0) {
+		newNode->next = head;
+		head = newNode;
+		return;
+	}
+	Node* traverser = head;
+	for (int i = 0; i < position - 1; i++) {
+		traverser = traverser->next;
+	}
+	newNode->next = traverser->next;
+	traverser->next = newNode;
 }
 void SinglyLinkedList::swapNode(Node* tNode)
 {

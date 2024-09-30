@@ -3,6 +3,7 @@
 
 int main()
 {
+	cout << "Case 1:" << endl;
 	// create a node object
 	Node* n1;
 	n1 = new Node(100); // create anode
@@ -25,6 +26,7 @@ int main()
 	// list before the node at position 0 (the
 	// first node counting as 0)
 	sLL1->display();
+	cout << endl << endl;
 	system("PAUSE");
 	return 0;
 }
