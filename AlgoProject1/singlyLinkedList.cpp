@@ -63,6 +63,28 @@ void SinglyLinkedList::insertSomewhere(int position, Node * newNode) // counting
 }
 void SinglyLinkedList::swapNode(Node* tNode)
 {
-	// CODE TO BE ADDED for Project 1
+	//don't search for the node
+	if (tNode == head) {
+		return;
+	}
+	
+	//In the case where tNode comes after head.
+	//Needs special handling, otherwise tNode will point at itself
+	if (head->next == tNode) {
+		head->next = tNode->next;
+		tNode->next = head;
+		head = tNode;
+		return;
+	}
+
+	Node* traverser = head;
+	while (traverser->next != tNode) {
+		traverser = traverser->next;
+	}
+	Node* headNext = head->next;
+	head->next = tNode->next;
+	traverser->next = head;
+	head = tNode;
+	head->next = headNext;
 }
 #endif
