@@ -45,7 +45,18 @@ void SinglyLinkedList::display()
 }
 void SinglyLinkedList::displayAddress()
 {
-	// CODE TO BE ADDED for Project 1
+	//display the head
+	cout << head << endl;
+	//if empty list, return
+	if (!head) { return; }
+
+	Node* traverser = head;
+	//until tail is reached
+	while(traverser) {
+		cout << traverser << " " << traverser->value << " " << traverser->next << endl;
+		//go to the next node
+		traverser = traverser->next;
+	}
 }
 void SinglyLinkedList::insertSomewhere(int position, Node * newNode) // counting
 {
