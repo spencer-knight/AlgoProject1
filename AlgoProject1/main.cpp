@@ -1,10 +1,12 @@
 #include "Node.h"
 #include "singlyLinkedList.h"
+#include <iostream>
 
 int main()
 {
-	int caseNum = 7;
+	int caseNum = 1;
 
+	//problem 1
 	if (caseNum == 1) {
 		cout << "Case 1:" << endl;
 		// create a node object
@@ -30,9 +32,8 @@ int main()
 		// first node counting as 0)
 		sLL1->display();
 		cout << endl << endl;
-		system("PAUSE");
-		return 0;
 	}
+	caseNum++;
 	if (caseNum == 2) {
 		cout << "Case 2:" << endl;
 		// create a node object
@@ -57,10 +58,9 @@ int main()
 		// list before the node at position 3 (the
 		// first node counting as 0)
 		sLL1->display();
-		system("PAUSE");
-		return 0;
 		cout << endl << endl;
 	}
+	caseNum++;
 	if (caseNum == 3) {
 		cout << "Case 3:" << endl;
 		// create a node object
@@ -85,13 +85,13 @@ int main()
 		// list before the node at position 1 (the
 		// first node counting as 0)
 		sLL1->display();
-		system("PAUSE");
-		return 0;
 		cout << endl << endl;
 	}
 
+	caseNum++;
 	//problem 2
 	if (caseNum == 4) {
+		cout << "Case 4:" << endl;
 		Node* n1;
 		n1 = new Node(100); // create anode
 		Node* n2;
@@ -119,9 +119,10 @@ int main()
 		// first node)
 		// no need to have the first node in the argument
 		sLL1->display();
-		system("PAUSE");
-		return 0;	}
+		cout << endl << endl;	}
+	caseNum++;
 	if (caseNum == 5) {
+		cout << "Case 5:" << endl;
 		// create a node object
 		Node* n1;
 		n1 = new Node(100); // create anode
@@ -150,9 +151,10 @@ int main()
 		// first node)
 		// no need to have the first node in the argument
 		sLL1->display();
-		system("PAUSE");
-		return 0;	}
+		cout << endl << endl;	}
+	caseNum++;
 	if (caseNum == 6) {
+		cout << "Case 6:" << endl;
 		Node* n1;
 		n1 = new Node(100); // create anode
 		Node* n2;
@@ -180,9 +182,11 @@ int main()
 		// first node)
 		// no need to have the first node in the argument
 		sLL1->display();
-		system("PAUSE");
-		return 0;	}
+		cout << endl << endl;	}
+	caseNum++;
+	//problem 3
 	if (caseNum == 7) {
+		cout << "Case 7:" << endl;
 		// create a node object
 		Node* n1;
 		n1 = new Node(100); // create anode
@@ -214,7 +218,7 @@ int main()
 		sLL1->displayAddress(); // display the singly linked list with node address
 		// and its value
 		// also display the head of the singly linked list
-		system("PAUSE");
-		return 0;
+		cout << endl << endl;
 	}
+	system("PAUSE");
 }

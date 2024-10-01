@@ -60,15 +60,19 @@ void SinglyLinkedList::displayAddress()
 }
 void SinglyLinkedList::insertSomewhere(int position, Node * newNode) // counting
 {
+	//if inserting at the head
 	if (position == 0) {
 		newNode->next = head;
 		head = newNode;
 		return;
 	}
+
+	//otherwise traverse until 1 before position
 	Node* traverser = head;
 	for (int i = 0; i < position - 1; i++) {
 		traverser = traverser->next;
 	}
+	//insert node before position
 	newNode->next = traverser->next;
 	traverser->next = newNode;
 }
@@ -88,6 +92,8 @@ void SinglyLinkedList::swapNode(Node* tNode)
 		return;
 	}
 
+	//find tNode assuming it is supposed to be in the list, the instructions were unclear on this however if
+	//the node isn't already in the list then how can this be a "swap"?
 	Node* traverser = head;
 	while (traverser->next != tNode) {
 		traverser = traverser->next;
